@@ -19,24 +19,23 @@ function simresolution_correlation(error_type, error_range, OPM_space, source_di
 
 % Parse inputs
 defaults = struct('surf_dir', 'd:\pred_coding\surf', 'mri_dir', 'd:\pred_coding\mri',...
-    'out_file', 'data_result\40run_10dB_8mm.mat', 'dipole_moment', 10, 'sim_patch_size', 3,...
-    'reconstruct_patch_size', 3, 'nsims', 60);  %define default values
+    'dipole_moment', 10, 'sim_patch_size', 3,... 'reconstruct_patch_size', 3, 'nsims', 60);  %define default values
 params = struct(varargin{:});
 for f = fieldnames(defaults)',
     if ~isfield(params, f{1}),
         params.(f{1}) = defaults.(f{1});
     end
 end
-addpath('E:\mydata\qsj\code1\matlab\spm12')
-addpath F:\simulation-paper\simulation-OPM
+addpath('E:\mydata\qsj\matlab\spm12')
+addpath F:\simulation-OPM
 spm('defaults', 'EEG');
-spm_jobman('initcfg');
 
 %% Set parameters
 %SNR             =  [10 20];   % signal-to-noise raio, X log10 (RMSsource/RMSnoise) sensor level
 %error_type = 'gain_error';
 out_path=fullfile('F:\simulation-paper\simulation-OPM\results',...
     'spatial_resolution',error_type);
+out_file = fullfile('data_result\',sprintf('40run_%ddB_%dmm.mat',SNR,source_distance));
 surf_path = fullfile('F:\simulation-paper\simulation-OPM',...
     'surf');
 pial_mesh = fullfile(surf_path,'cortex_20484.surf.gii');

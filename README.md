@@ -12,10 +12,11 @@ When starting a new data analysis project, you can use this repository as a temp
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | sim_opm_template             | construction of OPM array where many parameters such as the axis number, distance between opm and scalp can be set 
 | angualr_err      | considering the angular error of opm array to creat the new lead field                 
-| crosstalk_err     | creat crosstalk error matrix for single matrix                                                                                                                                                                 |    
+| crosstalk_err     | creat crosstalk matrix for single axis opm                                                                                                                                                                |    
 | README.md               | The README document you are currently reading.                                                                                                                                                       |
 |gain_error      | considering the angular error of opm array to alter the simulated meg data            |
 | simresolution_correlation | the main function to simulate the effect of different calibration errors on the spatial resolution of beamformer imaging.
-| dodo.py                 | A version of the main script that is meant to be consumed by the build system "pydoit". Use either this script as main script or use `main.py`.                                                |
-| figure_example1.py      | Script that produces the first figure in this analysis.                                                                                                                                              |                
+| crosstalk_dual_err                 | creat crosstalk matrix for dual axis opm                                                  |
+| cortex_20484.surf.gii      | template cortex file used for dipole location.
+| Temp_sim_opm_30mm.mat      | template meg simulation file used an single axis opm array with space of 30mm. |                
 

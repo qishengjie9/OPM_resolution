@@ -18,5 +18,5 @@ When starting a new data analysis project, you can use this repository as a temp
 | simresolution_correlation | the main function to simulate the effect of different calibration errors on the spatial resolution of beamformer imaging.
 | crosstalk_dual_err                 | creat crosstalk matrix for dual axis opm                                                  |
 | cortex_20484.surf.gii      | template cortex file used for dipole location.
-| Temp_sim_opm_30mm.mat      | template meg simulation file used an single axis opm array with space of 30mm. |                
+| Temp_sim_opm_30mm.mat      | template meg simulation file used a single axis opm array with space of 30mm. |                
 
